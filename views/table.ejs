@@ -1,0 +1,41 @@
+<%- include("header") -%>
+<h1>March Madness Tool</h1>
+    <form action="" method="post">
+        <label for="team1Input">Team 1:</label>
+        <input type="text" id="team1Input" name="team1">
+        <label for="team2Input">Team 2:</label>
+
+        <input type="text" id="team2Input" name="team2">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="compare-teams">
+        <table>
+            <tr>
+                <th><%= team1Name %></th>
+                <th><%= team2Name %></th>
+            </tr>
+            <tr>
+                <% if (team1Points > team2Points) { %> 
+                    <td class="greater-value"><%= team1Points %> PPG</td>
+                    <td class="lesser-value"><%= team2Points %> PPG</td>
+                <% } else { %>
+                    <td class="lesser-value"><%= team1Points %> PPG</td>
+                    <td class="greater-value"><%= team2Points %> PPG</td>
+                <% } %>
+            </tr>
+            <tr>
+                <% if (team1TotalReb > team2TotalReb) { %> 
+                    <td class="greater-value"><%= team1TotalReb %> RPG</td>
+                    <td class="lesser-value"><%= team2TotalReb %> RPG</td>
+                <% } else { %>
+                    <td class="lesser-value"><%= team1TotalReb %> RPG</td>
+                    <td class="greater-value"><%= team2TotalReb %> RPG</td>
+                <% } %>
+            </tr>
+            <tr>
+                <td><%= team13PP %></td>
+                <td><%= team23PP %></td>
+            </tr>
+        </table>
+    </div>
+<%- include("footer") -%>
