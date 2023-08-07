@@ -1,0 +1,17 @@
+{
+  "name": "march-madness-tool",
+  "version": "1.0.0",
+  "description": "Tool for users to compare and get stats from NCAA D1 Men's Basketball teams to help them create their March Madness Brackets.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "https": "^1.0.0"
+  }
+}
