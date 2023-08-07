@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>March Madness Tool</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>March Madness Tool</h1>
-    
+    <form action="" method="post">
+        <label for="team1Input">Team 1:</label>
+        <input type="text" id="team1Input" name="team1">
+        <label for="team2Input">Team 2:</label>
+
+        <input type="text" id="team2Input" name="team2">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="compare-teams">
+        <table>
+            <tr>
+                <th>Team1 Name</th>
+                <th>Team2 Name</th>
+            </tr>
+            <tr>
+                <td>Team1 PPG</td>
+                <td>Team2 PPG</td>
+            </tr>
+            <tr>
+                <td>Team1 RPG</td>
+                <td>Team2 RPG</td>
+            </tr>
+            <tr>
+                <td>Team1 3P%</td>
+                <td>Team2 3P%</td>
+            </tr>
+        </table>
+    </div>
+        
 </body>
 </html>

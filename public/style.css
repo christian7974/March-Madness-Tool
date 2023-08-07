@@ -1,0 +1,26 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#compare-teams {
+  margin-top: 25px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.greater-value {
+  background-color: green;
+}
+
+.lesser-value {
+  background-color: red;
+}
