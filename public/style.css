@@ -1,15 +1,21 @@
 
+
 #compare-teams {
   margin-top: 25px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+}
+
+.before-information tr:nth-child(even) {
+  background-color: lightgrey;
 }
 
 td, th {
@@ -24,4 +30,12 @@ td, th {
 
 .lesser-value {
   background-color: red;
+}
+
+.main-header {
+  margin-left: 12px;
+}
+
+label {
+  margin-left: 12px;
 }
