@@ -1,4 +1,11 @@
+@font-face {
+  font-family: myRoboto;
+  src: url(Roboto/Roboto-Medium.ttf);
+}
 
+* {
+  font-family: myRoboto;
+}
 
 #compare-teams {
   margin-top: 25px;
@@ -25,11 +32,13 @@ td, th {
 }
 
 .greater-value {
-  background-color: green;
+  background-color: #69ba6b;
+  color: #1B1B1B;
 }
 
 .lesser-value {
-  background-color: red;
+  background-color: #ff1919		;
+  color: #060606;
 }
 
 .main-header {
@@ -38,4 +47,16 @@ td, th {
 
 label {
   margin-left: 12px;
+  font-size: 24px;
+}
+
+.team-name-header {
+  font-size: 36px;
+}
+
+#header-information {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
