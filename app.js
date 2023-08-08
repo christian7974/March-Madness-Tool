@@ -26,61 +26,20 @@ app.post("/", function(req, res) {
             res.render("table", {
                 team1Name: firstTeam.name,
                 team2Name: secondTeam.name,
+                statEndings: ["PPG", "FGM", "FGA", "FG%", "3PM", 
+                "3PA", "3P%", "FTM", "FTA", "OREB", 
+                "DREB", "RTB", "APG", "SPG", "BPG", "TOPG"],
 
-                team1pointsPG: firstTeam.pointsPG,
-                team2pointsPG: secondTeam.pointsPG,
+                team1Stats: [firstTeam.pointsPG, firstTeam.fieldGoalsMadePG, firstTeam.fieldGoalsAttPG,
+                firstTeam.FGPercent, firstTeam.threePointMadePG, firstTeam.threePointAttPG, firstTeam.threePointPercent, firstTeam.freeThrowMadePG, 
+                firstTeam.freeThrowAttPG, firstTeam.offReboundsPG, firstTeam.defReboundsPG, firstTeam.totalReboundsPG, firstTeam.assistsPG, 
+                firstTeam.stealsPG, firstTeam.blocksPG, firstTeam.turnoversPG],
 
-                team1fieldGoalsMadePG: firstTeam.fieldGoalsMadePG,
-                team2fieldGoalsMadePG: secondTeam.fieldGoalsMadePG,
+                team2Stats: [secondTeam.pointsPG, secondTeam.fieldGoalsMadePG, secondTeam.fieldGoalsAttPG, secondTeam.FGPercent, secondTeam.threePointMadePG, 
+                    secondTeam.threePointAttPG, secondTeam.threePointPercent, secondTeam.freeThrowMadePG, secondTeam.freeThrowAttPG,
+                    secondTeam.offReboundsPG, secondTeam.defReboundsPG, secondTeam.totalReboundsPG, secondTeam.assistsPG, secondTeam.stealsPG, secondTeam.blocksPG, 
+                    secondTeam.turnoversPG],
 
-                team1fieldGoalsAttPG: firstTeam.fieldGoalsAttPG,
-                team2fieldGoalsAttPG: secondTeam.fieldGoalsAttPG,
-
-                team1FGPercent: firstTeam.FGPercent,
-                team2FGPercent: secondTeam.FGPercent,
-
-                team1threePointMadePG: firstTeam.threePointMadePG,
-                team2threePointMadePG: secondTeam.threePointMadePG,
-
-                team1threePointAttPG: firstTeam.threePointAttPG,
-                team2threePointAttPG: secondTeam.threePointAttPG,
-
-                team1threePointPercent: firstTeam.threePointPercent,
-                team2threePointPercent: secondTeam.threePointPercent,
-
-                team1freeThrowMadePG: firstTeam.freeThrowMadePG,
-                team2freeThrowMadePG: secondTeam.freeThrowMadePG, 
-
-                team1freeThrowAttPG: firstTeam.freeThrowAttPG,
-                team2freeThrowAttPG: secondTeam.freeThrowAttPG, 
-
-                team1freeThrowPercent: firstTeam.freeThrowPercent,
-                team2freeThrowPercent: secondTeam.freeThrowPercent,
-
-                team1offReboundsPG: firstTeam.offReboundsPG,
-                team1offReboundsPG: firstTeam.offReboundsPG,
-
-                team1defReboundsPG: firstTeam.defReboundsPG,
-                team1defReboundsPG: firstTeam.defReboundsPG,
-
-                team1totalReboundsPG: firstTeam.totalReboundsPG,
-                team2totalReboundsPG: secondTeam.totalReboundsPG,
-
-                team1assistsPG: firstTeam.assistsPG,
-                team2assistsPG: secondTeam.assistsPG,
-
-                team1stealsPG: firstTeam.stealsPG,
-                team2stealsPG: secondTeam.stealsPG,
-
-                team1blocksPG: firstTeam.blocksPG,
-                team2blocksPG: secondTeam.blocksPG,
-
-                team1turnoversPG: firstTeam.turnoversPG,
-                team2turnoversPG: secondTeam.turnoversPG,
-
-                teamStats: ["pointsPG", "fieldGoalsMadePG", "fieldGoalsAttPG", "FGPercent", "threePointMadePG", 
-                "threePointAttPG", "threePointPercent", "freeThrowMadePG", "freeThrowAttPG", "freeThrowPercent", "offReboundsPG", 
-                "defReboundsPG", "totalReboundsPG", "assistsPG", "stealsPG", "blocksPG", "turnoversPG"]
             });
         });
     });

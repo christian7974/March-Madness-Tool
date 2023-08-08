@@ -14,41 +14,13 @@
                 <th><%= team1Name %></th>
                 <th><%= team2Name %></th>
             </tr>
-            <% for (var i = 1; i < teamStats.length; i ++) { %>
-                <% console.log(teamStats[i]) %>
+            <% for (var i = 0; i < team1Stats.length; i ++) { %>
                 <tr>
-                    <td class="<%= 'team1' + teamStats[i] > 'team2' + teamStats[i] ? 'greater-value' : 'lesser-value'%>"><%= 'team1' + teamStats[i]  %> PPG</td>
-                    <td class="<%= 'team1' + teamStats[i] > 'team2' + teamStats[i] ? 'greater-value' : 'lesser-value'%>"><%= 'team2' + teamStats[i] %> PPG</td>
+                    <td class="<%= team1Stats[i] > team2Stats[i] ? 'greater-value' : 'lesser-value'%>"><%= team1Stats[i] %> <%= statEndings[i] %></td>
+                    <td class="<%= team1Stats[i] < team2Stats[i] ? 'greater-value' : 'lesser-value'%>"><%= team2Stats[i] %> <%= statEndings[i] %></td>
                 </tr>
             <% } %>
-            <!-- <tr>
-                <td class="<%= team1Points > team2Points ? 'greater-value' : 'lesser-value'%>"><%= team1Points %> PPG</td>
-                <td class="<%= team1Points < team2Points ? 'greater-value' : 'lesser-value'%>"><%= team2Points %> PPG</td>
-            </tr> -->
-            <!-- <tr>
-                <td class="<%= team1FGMPG > team2FGMPG ? 'greater-value' : 'lesser-value'%>"><%= team1FGMPG %> FGM</td>
-                <td class="<%= team1FGMPG < team2FGMPG ? 'greater-value' : 'lesser-value'%>"><%= team2FGMPG %> FGM</td>
-            </tr>
-            <tr>
-                <td class="<%= team1FGA > team2FGA ? 'greater-value' : 'lesser-value'%>"><%= team1FGA %> FGA</td>
-                <td class="<%= team1FGA < team2FGA ? 'greater-value' : 'lesser-value'%>"><%= team2FGA %> FGA</td>
-            </tr>
-           <tr>
-                <td class="<%= team1FGPercent > team2FGPercent ? 'greater-value' : 'lesser-value'%>"><%= team1FGPercent %> FG%</td>
-                <td class="<%= team1FGPercent < team2FGPercent ? 'greater-value' : 'lesser-value'%>"><%= team2FGPercent %> FG%</td>
-            </tr>
-            <tr>
-                <td class="<%= team1ThreeMade > team2ThreeMade ? 'greater-value' : 'lesser-value'%>"><%= team1ThreeMade %> 3PM</td>
-                <td class="<%= team1ThreeMade < team2ThreeMade ? 'greater-value' : 'lesser-value'%>"><%= team2ThreeMade %> 3PM</td>
-            </tr>
-            <tr>
-                <td class="<%= team1ThreeMade > team2ThreeMade ? 'greater-value' : 'lesser-value'%>"><%= team1ThreeMade %> 3PM</td>
-                <td class="<%= team1ThreeMade < team2ThreeMade ? 'greater-value' : 'lesser-value'%>"><%= team2ThreeMade %> 3PM</td>
-            </tr>
-            <tr>
-                <td class="<%= team1TotalReb > team2TotalReb ? 'greater-value' : 'lesser-value'%>"><%= team1TotalReb %> TRPG</td>
-                <td class="<%= team2TotalReb > team1TotalReb ? 'greater-value' : 'lesser-value'%>"><%= team2TotalReb %> TRPG</td>
-            </tr> -->
+            
         </table>
     </div>
 <%- include("footer") -%>
