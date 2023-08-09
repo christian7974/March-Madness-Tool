@@ -12,7 +12,6 @@
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 table {
@@ -37,7 +36,7 @@ td, th {
 }
 
 .lesser-value {
-  background-color: #ff1919		;
+  background-color: #ff1919;
   color: #060606;
 }
 
@@ -58,5 +57,15 @@ label {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+#error-message {
+  font-size: 20px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff1919;
+  margin-top: 20px;
   text-align: center;
 }

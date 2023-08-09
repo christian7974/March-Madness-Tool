@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 app.get("/", function(req, res) {
     res.render("index", {
         statEndings: globalStatEndings,
+        errorMessage: "",
     });
 });
 
@@ -25,10 +26,20 @@ app.post("/", function(req, res) {
     var firstTeam, secondTeam;
     const url = "https://college-basketball-api.onrender.com/teams/compare/" + team1 + "/" + team2;
     https.get(url, function(response) {
+
         response.on("data", function(data) {
+            if (response.statusCode != 200) {
+                const problem = JSON.parse(data);
+                res.render("index", {
+                    statEndings: globalStatEndings,
+                    errorMessage: problem.error,
+                });
+                return;
+            }
             firstTeam = JSON.parse(data)[0];
             secondTeam = JSON.parse(data)[1];
             res.render("table", {
+                errorMessage: "",
                 team1Name: firstTeam.name,
 
                 team2Name: secondTeam.name,
