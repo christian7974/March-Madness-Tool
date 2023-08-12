@@ -1,0 +1,17 @@
+<%- include("header") -%>
+    <div id="compare-teams">
+        <table>
+            <tr>
+                <th class="team-name-header"><%= team1Name %></th>
+                <th class="team-name-header"><%= team2Name %></th>
+            </tr>
+            <% for (var i = 0; i < team1Stats.length; i ++) { %>
+                <tr>
+                    <td class="<%= team1Stats[i] > team2Stats[i] ? 'greater-value' : 'lesser-value'%>"><%= team1Stats[i] %> <%= statEndings[i] %></td>
+                    <td class="<%= team1Stats[i] < team2Stats[i] ? 'greater-value' : 'lesser-value'%>"><%= team2Stats[i] %> <%= statEndings[i] %></td>
+                </tr>
+            <% } %>
+            
+        </table>
+    </div>
+<%- include("footer") -%>

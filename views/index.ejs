@@ -1,0 +1,18 @@
+<%- include("header") -%>
+    <div id="error-message"><%= errorMessage %></div>
+    <div id="compare-teams" class="before-information">
+        <table>
+            <tr>
+                <th class="team-name-header">Team 1 Name</th>
+                <th class="team-name-header">Team 2 Name</th>
+            </tr>
+            <% for (var i = 0; i < statEndings.length; i ++) { %>
+                <tr>
+                    <td> Team 1 <%= statEndings[i] %></td>
+                    <td>Team 2 <%= statEndings[i] %></td>
+                </tr>
+            <% } %>
+            
+        </table>
+    </div>
+<%- include("footer") -%>
