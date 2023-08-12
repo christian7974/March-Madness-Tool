@@ -20,12 +20,21 @@ I also used ternary operators since that is an easier way of writing an if-else 
 I made this tool so that I could have a tool that could help me find the stats of teams and to be able to compare their stats to help me make a bracket for March Madness. The current tools that I was using (ESPN and other websites) either listed very few stats for each team or were behind a pay wall. I made this app so that people could find the statistics for free in an easy to use and friendly format. 
 
 # Features/Functionality
-To compare the stats of two teams, just type in both team names and the app will display the stats of both teams and color code the larger of the two stats. For instance, if you want to check the stats of Gonzaga and Oral Roberts, type them into the search boxes and you will see the following output:
+To compare the stats of two teams, just type in both team names and the app will display the stats of both teams and color code the larger of the two stats.   
+
+For instance, if you want to check the stats of Gonzaga and Oral Roberts, type them into the search boxes and you will see the following output:  
+
 ![First example comparing Gonzaga and Oral Roberts](examples_folder/gonzaga_oral_roberts.png)
-If you try to search for a team, you will get the following error:
+
+
+If you try to search for a team that is not in the API, you will get the following error:
+
 ![Second example with a team that is not in the database](examples_folder/wrong_team.png)
-And if you try to search for two teams that are not in the database, you will get this error:
+
+And if you try to search for two teams that are not in the API (i.e if you mispelled a team name), you will get this error:  
+
 ![Third example with teams that are not in the database](examples_folder/both_wrong_teams.png)
+
 The error messages come from the API as a JSON object and the website writes the value of the "error" key in that JSON object.
 
 # Features To Be Implemented
