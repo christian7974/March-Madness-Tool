@@ -1,5 +1,7 @@
 # March Madness Tool
 
+[Link to Website](https://march-madness-tool.onrender.com)
+
 # Description of Project
 This is an application that people can use to fetch information about NCAA Men's DI Basketball Teams. It is very simple to use (type the names of both teams that you want to compare stats for) and also is more descriptive than other websites, as it lists out every stat rather than than a very small amount (which may not be enough for some people to make a decision in March Madness).  
 To create this app, I used an [API that I made](https://github.com/christian7974/College-Basketball-API) to fetch the stats for the teams. I also used ejs to template the page to reduce the amount of repeated code and to overall make the program very readable. I also used Express and Node.js.
